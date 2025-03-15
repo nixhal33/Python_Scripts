@@ -34,8 +34,10 @@ def movies_to_scrape_G(website):
 
     return movies_data
 
+# calling the function movies_to_scrape_G
 movies = movies_to_scrape_G(website)
 
+# directing the location where to store the scraped movie
 target_directory = '/home/nix/Documents/py_scripts/Python_Scripts/web scraping/scraped_movies'
 if not os.path.exists(target_directory):
     os.makedirs(target_directory)
