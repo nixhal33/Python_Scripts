@@ -12,6 +12,7 @@ soup = BeautifulSoup(content,'lxml')
 # for pagination
 pagination = soup.find('ul',class_='pagination')
 pages = pagination.find_all('li', class_='page-item')
+ignore_lastpagearrow = pages[-2].text
 
 # simple entire div class for the movies title and their link div
 main_box = soup.find('article', class_='main-article')
